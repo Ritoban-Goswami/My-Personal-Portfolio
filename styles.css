@@ -294,6 +294,7 @@ form input,
 form textarea {
     background: var(--lightGrey);
     border-radius: .4rem;
+    font-size: calc(.5rem + .7vw);
     margin-top: .4vw;
     padding: .8vw 1vw;
     resize: vertical;
