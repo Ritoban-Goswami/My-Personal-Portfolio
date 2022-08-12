@@ -178,15 +178,15 @@ section {
     margin-left: .8rem;
 }
 
-#aboutText a {
+#aboutText span {
     color: var(--queenRed);
     letter-spacing: .13em;
     transition: all 125ms;
 }
 
-#aboutText a:hover {
+#aboutText span:hover {
     color: var(--red);
-    letter-spacing: .20em;
+    letter-spacing: .15em;
 }
 
 #skillButtons {
