@@ -326,7 +326,7 @@ form textarea {
     flex-direction: column;
 }
 
-#sendButton {
+.sendButton {
     background: var(--red);
     border-radius: .5vw;
     font-weight: 500;
@@ -337,15 +337,38 @@ form textarea {
     border: none;
 }
 
+.spinner-border {
+    width: calc(.5rem + .7vw);
+    ;
+    height: calc(.5rem + .7vw);
+    ;
+}
+
 .sendButtonDiv {
     flex-direction: row;
     justify-content: center;
 }
 
-#sendButton:hover {
+.sendButton:hover {
     font-size: calc(.5rem + .71vw);
     background-color: var(--queenRed);
     color: var(--lightGrey);
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .15s;
+}
+
+.alert {
+    position: fixed;
+    text-align: center;
+    font-size: calc(.6rem + .5vw);
+    width: 25%;
+    top: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .footer {

@@ -2,13 +2,13 @@ let myForm = document.getElementById('form-id');
 let userName = document.getElementById('name');
 let email = document.getElementById('email');
 let subject = document.getElementById('subject');
-let sendButton = document.getElementById('sendButton');
-
+let sendButton = document.getElementById('sendBtn');
+let alertPopUp = document.getElementById('alertPopUp');
+let testBtn = document.getElementById('testBtn');
 
 myForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    let spinnerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-<span class="visually-hidden">Loading...</span>`
+    let spinnerHTML = `<div class="d-flex justify-content-center"><div class="spinner-border m-1" role="status" aria-hidden="true"><span class="visually-hidden">Loading...</span></div></div>`
 
     sendButton.innerHTML = spinnerHTML
 
@@ -29,7 +29,11 @@ myForm.addEventListener('submit', function (e) {
             myForm.reset()
             console.log(data)
             sendButton.innerHTML = 'Send'
-            alert(data.message)
+            alertPopUp.innerHTML = ` ${data.message} <i class="ms-1 fa-sharp fa-solid fa-circle-check"></i>`
+            alertPopUp.classList.toggle("hidden")
+            setTimeout(() => {
+                alertPopUp.classList.toggle("hidden")
+            }, 4000)
         })
         .catch(error => {
             alert(error)

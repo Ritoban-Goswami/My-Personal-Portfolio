@@ -34,6 +34,10 @@
                 </a>
             </div>
         </nav>
+        <!-- Alert PopUP -->
+        <div id="alertPopUp" class="hidden alert alert-secondary" role="alert">
+            The Form Was Submitted Successfully<i class="ms-1 fa-sharp fa-solid fa-circle-check"></i>
+        </div>
         <!-- Hero Section -->
         <section class="row">
             <div id="heroDiv" class="col">
@@ -199,7 +203,7 @@
                             <textarea id="subject" rows="5" name="message"></textarea>
                         </div>
                         <div class="sendButtonDiv formDiv">
-                            <button id="sendButton" type="submit">
+                            <button id="sendBtn" class="sendButton" type="submit">
                                 Send
                             </button>
                         </div>
