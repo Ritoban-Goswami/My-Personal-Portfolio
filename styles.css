@@ -334,6 +334,7 @@ form textarea {
     padding: .2vw .8vw;
     color: var(--offWhite);
     transition: all 125ms;
+    border: none;
 }
 
 .sendButtonDiv {
